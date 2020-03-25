@@ -64,6 +64,7 @@ def max_value(my_list):
       count += power_alphabet[element[x]]
     res_list.append(count)
     count = 0
-  return max(res_list)
+  count = res_list.index(max(res_list))
+  return my_list[count]
 
 print(max_value(filter_str()))
