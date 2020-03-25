@@ -18,7 +18,6 @@ All letters will be lowercase and all inputs will be valid.
 import re
 
 power_alphabet = {
-  ' ': 0,
   'a': 1,
   'b': 2,
   'c': 3,
@@ -51,7 +50,9 @@ def filter_str():
   reg = re.compile('[^a-zA-Z ]')
   my_string = reg.sub('', input('enter your sentence: ').lower())
   my_list = my_string.split()
+  my_list = list(filter(None, my_list))
   return my_list
+
 
 def max_value(my_list):
   
